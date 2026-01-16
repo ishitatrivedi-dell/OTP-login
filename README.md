@@ -96,3 +96,85 @@ User enters phone number → backend checks database.
   isVerified: Boolean,
   createdAt: Date
 }
+OTP Schema
+{
+  identifier: String, // phone or email
+  otp: String,        // hashed
+  channel: String,    // sms | email | whatsapp
+  expiresAt: Date,
+  attempts: Number
+}
+
+🔗 API Endpoints
+Method	Endpoint	Description
+POST	/auth/check-user	Check if user exists
+POST	/auth/send-otp	Send OTP
+POST	/auth/verify-otp	Verify OTP & login
+POST	/auth/register	Register new user
+POST	/auth/register/verify-otp	Verify OTP & auto-login
+GET	/auth/me	Get logged-in user
+POST	/auth/logout	Logout user
+🔐 Security Measures
+
+OTP expiry: 5 minutes
+
+OTP hashing using bcrypt
+
+Maximum OTP attempts: 3
+
+OTP invalidated after verification
+
+Rate-limiting OTP requests
+
+HTTP-only cookies
+
+JWT expiration enforcement
+
+🧪 Test Scenarios
+
+Existing user OTP login
+
+New user registration + OTP
+
+Invalid OTP attempts
+
+OTP expiry handling
+
+Multi-tab authentication
+
+Session expiration after 3 hours
+
+📦 Installation & Setup
+# Clone the repository
+git clone https://github.com/your-username/otp-auth-mern.git
+
+# Backend setup
+cd server
+npm install
+npm run dev
+
+# Frontend setup
+cd client
+npm install
+npm start
+
+📈 Future Enhancements
+
+Refresh token implementation
+
+Role-based access control
+
+Push-based OTP approvals
+
+Login activity & audit logs
+
+International SMS support
+
+📜 License
+
+MIT License
+
+👩‍💻 Author
+
+Ishita Trivedi
+Full Stack Developer (MERN, Next.js, AWS)
