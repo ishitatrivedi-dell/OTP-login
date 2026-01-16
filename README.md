@@ -138,7 +138,7 @@ Session expiration after 3 hours
 
 📦 Installation & Setup
 # Clone the repository
-git clone https://github.com/your-username/otp-auth-mern.git
+git clone https://github.com/ishitatrivedi-dell/OTP-login
 
 # Backend setup
 cd server
