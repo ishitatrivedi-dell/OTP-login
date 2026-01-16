@@ -104,6 +104,7 @@ OTP Schema
   expiresAt: Date,
   attempts: Number
 }
+```
 
 🔗 API Endpoints
 Method	Endpoint	Description
