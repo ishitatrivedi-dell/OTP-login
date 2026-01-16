@@ -106,22 +106,13 @@ OTP Schema
 }
 ```
 
-🔗 API Endpoints
-Method	Endpoint	Description
-POST	/auth/check-user	Check if user exists
-POST	/auth/send-otp	Send OTP
-POST	/auth/verify-otp	Verify OTP & login
-POST	/auth/register	Register new user
-POST	/auth/register/verify-otp	Verify OTP & auto-login
-GET	/auth/me	Get logged-in user
-POST	/auth/logout	Logout user
-🔐 Security Measures
-
 OTP expiry: 5 minutes
 
 OTP hashing using bcrypt
 
 Maximum OTP attempts: 3
+
+Maximun device login : 3 
 
 OTP invalidated after verification
 
